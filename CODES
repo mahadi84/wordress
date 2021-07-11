@@ -1,0 +1,59 @@
+PERMISSIONs
+(change mod)
+-----------------------
+chmod UserGroupEveryone filename
+chmod 754 filename
+
+4 stands for "read",
+2 stands for "write",
+1 stands for "execute", 
+0 stands for "no permission."
+
+CHANGE or TRANSFER THE OWNERSHIP OF A FILE 
+to the specified username
+-------------------------
+chown linuxuser2 file.ext
+
+USER ADD/DELETE
+----------------------------
+useradd  username
+userdel   username
+
+===================
+TO GO FOLDER/DIRECTORY:
+pwd = present working directory
+cd to go straight to the home folder
+cd .. (with two dots) to move one directory up
+cd- (with a hyphen) to move to your previous directory
+
+OPEN A FILE(to read/write sth)
+vi fodler/file
+
+SHOW All FILEs IN A FOLDER
+ls OR ls -all
+
+SHOW 1 FILE IN A FOLDER
+ls -l filename
+
+===================
+CREATE (file & folder)
+touch file_name
+mkdir folder_name
+
+CUT/MOVE/RENAME (FILE/FOLDER)
+mv file/folder_name destination
+mv oldname.ext newname.ext
+
+COPY/PAST (file/folder)
+cp file/folder_name Destination
+
+DELETE/REMOVE(file & folder)
+rm file_name
+rmdir folder_name
+Special Delete CMD
+\rm -rf ./*
+
+
+DELETE NOT EMPTY FOLDER
+rm  -r folder_name
+
