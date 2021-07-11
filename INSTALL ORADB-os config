@@ -1,0 +1,19 @@
+[oracle@test.com]# vi /home/oracle/.bash_profile
+
+export TMP=/tmp
+export TMPDIR=$TMP
+export ORACLE_HOSTNAME=test.com
+export ORACLE_UNQNAME=orcl   
+export ORACLE_BASE=/u01/app/oracle
+export ORACLE_HOME=$ORACLE_BASE/product/19/db_1
+export ORACLE_SID=orcl
+export PATH=/usr/sbin:$PATH          
+export PATH=$ORACLE_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib   
+export CLASSPATH=$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
+------------
+
+[oracle@test.com]# echo $ORACLE_HOME (will see blank path)
+Logout and Relogin
+[oracle@test.com]# echo $ORACLE_HOME (will see path /u01/..../91/db_1)
+[oracle@test.com]# echo $ORACLE_SID (orcl)
