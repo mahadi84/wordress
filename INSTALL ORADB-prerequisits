@@ -1,0 +1,24 @@
+EDIT HOST FILE as [root@test.com mahadi]:
+-----------------------
+vi /etc/hosts  (ADD LINE: 192.168.0.101 test.com test)
+
+INSTALL PACKEGES [root@test.com mahadi]:
+----------------
+yum install -y oracle-database-preinstall-19c   (will create neccesary Environment, USER and its GROUP)
+
+
+CREATE DIRECTORY [root@test.com mahadi]:
+----------------
+
+mkdir -p /u01/app/oracle/product/19/db_1
+chown -R oracle:oinstall /u01
+chmod -R 775 /u01
+
+
+DISABLE FIREWALL and CHANGE PASSWORD for ORACLE USER [root@test.com mahadi]:
+----------------------------------------------------------------------------
+
+systemctl stop firewalld
+systemctl disable firewalld
+
+passwd oracle
