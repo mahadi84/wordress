@@ -1,0 +1,17 @@
+Youtube Link: https://www.youtube.com/watch?v=NmFN7azdZzY
+
+RUN AS ADMINISTRATOR:
+--------------------
+
+VBox_GA..iso file attach to OPTICAL DRIVE first (Devices> Optical Drive > VBOX_...iso).
+
+[root@]# mount  (To get PATH of cd drive to install GUEST EDITION Ex: /run/media/mahadi/VBox_GAs_6.1.22/)
+[root@]# cd /run/media/mahadi/VBox_GAs_6.1.22/
+[root@ VBox_GAs_6.1.22]# ls -l ( to check if VBoxLinuxAdditions.run and autorun.sh are available)
+[root@ VBox_GAs_6.1.22]# dnf install kernel-uek-devel-$(uname -r) gcc binutils automake make perl bzip2 elfutils-libelf-devel
+
+**Dialogue box will appear , YES (2 time).
+
+[root@ VBox_GAs_6.1.22]# ./VBoxLinuxAdditions.run
+[root@ VBox_GAs_6.1.22]# lsmod | grep -i vbox  (to check if files are installed)
+[root@ VBox_GAs_6.1.22]# systemctl reboot
