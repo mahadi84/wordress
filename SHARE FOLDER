@@ -1,0 +1,24 @@
+Youtube: https://www.youtube.com/watch?v=TwLp7x_sCio
+
+=CREATE FOLDER IN WINDOWS and SHARE with ALL Permission
+
+INSTALL PKG
+============
+yum install samba-client cifs-utils
+OR
+yum install samba-client -y
+
+SHARE FOLDER LIST IN HOST MACHINE
+=================================
+smbclient -L 192.168.0.103  (IP for current guest machine )
+OR
+smbclient -U username=user, -L 192.168.0.103
+
+MOUNT THE SHARED FOLDER TO LINUX
+================================
+mount -t cifs -o username=user //192.168.0.103/shared /mnt
+
+CREATE FILE TO CHECK IF IT WORKS
+================================
+cd /mnt/
+touch mahadi.txt
